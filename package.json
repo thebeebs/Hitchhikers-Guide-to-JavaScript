@@ -1,0 +1,33 @@
+{
+  "name": "joomladay",
+  "version": "0.0.1",
+  "description": "Tutorial: Angular",
+  "main": "angular.js",
+  "scripts": {
+    "prestart": "browserify myworld.js -o builtgame.js",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thebeebs/joomladay"
+  },
+  "keywords": [
+    "joomla"
+  ],
+  "author": "Martin Beeby <martinbeeby@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebeebs/joomladay/issues"
+  },
+  "homepage": "https://github.com/thebeebs/joomla",
+  "dependencies": {
+    "live-server": "0.8.2",
+    "voxel-engine": "~0.17.1",
+    "voxel-perlin-terrain": "0.0.5",
+    "voxel-forest": "0.0.0",
+    "browservefy": "0.0.10",
+    "toolbar": "0.0.5",
+    "voxel-debris": "0.0.4",
+    "voxel-player": "~0.1.0"
+  }
+}
