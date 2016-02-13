@@ -1,3 +1,4 @@
+import $ from 'bower_components/jquery/dist/jquery'
 function test() {
     "use strict"
 class salesChart extends HTMLElement{
@@ -7,7 +8,7 @@ class salesChart extends HTMLElement{
         <style type='text/css'>
         .primary {color : red}
         </style>
-        <div class='primary'> OH MY Giddy Aunt</div>`;
+        <div class='primary'> My Sales data</div>`;
     }    
 }
 

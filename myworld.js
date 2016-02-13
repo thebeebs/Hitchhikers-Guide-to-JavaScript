@@ -14,30 +14,31 @@ window.jeff = function(){
 // create the game
 
 var createEngine = require('voxel-engine');
-var createTerrain = require('voxel-perlin-terrain');
+//var createTerrain = require('voxel-perlin-terrain');
 
 var game = createEngine({
-  texturePath: './textures/',
-  generate: function(x,y,z) {
-    return x*x+y*y+z*z <= 15*15 ? 1 : 0 // sphere world
-  },
-  materials: [['grass', 'dirt', 'grass_dirt'], 'brick', 'dirt'],
-  materialFlatColor: false,
-  chunkSize: 32,
-  chunkDistance: 2,
-  worldOrigin: [0, 0, 0],
-  controls: { discreteFire: false },
-  lightsDisabled: false,
-  fogDisabled: false,
-  generateChunks: true,
-  playerHeight: 1.62
+  texturePath: 'textures/', generate: function(x, y, z) {
+    return y === 1 ? 1 : 0
+  }
+
 });
 
 var container = document.getElementById('container');
 game.appendTo(container);
 
 var createPlayer = require('voxel-player')(game);
-var shama = createPlayer('shama.png');
-shama.yaw.position.set(0, 0, 0);
-shama.possess();
+var beeby = createPlayer('beeby.png');
+beeby.yaw.position.set(0, 100, 0);
+beeby.possess();
+
+for (var index = 0; index < 20; index++) {
+    var pos = [1, 1 + index, 1 ]
+    game.setBlock(pos, 3)    
+}
+
+for (var index = 0; index < 10; index++) {
+    var pos = [1, 1 + index, 5 ]
+    game.setBlock(pos, 3)    
+}
+
 
