@@ -14,7 +14,7 @@ window.jeff = function(){
 // create the game
 
 var createEngine = require('voxel-engine');
-//var createTerrain = require('voxel-perlin-terrain');
+
 
 var game = createEngine({
   texturePath: 'textures/', generate: function(x, y, z) {
@@ -28,17 +28,7 @@ game.appendTo(container);
 
 var createPlayer = require('voxel-player')(game);
 var beeby = createPlayer('beeby.png');
-beeby.yaw.position.set(0, 100, 0);
+beeby.yaw.position.set(0, 3, 0);
 beeby.possess();
 
-for (var index = 0; index < 20; index++) {
-    var pos = [1, 1 + index, 1 ]
-    game.setBlock(pos, 3)    
-}
-
-for (var index = 0; index < 10; index++) {
-    var pos = [1, 1 + index, 5 ]
-    game.setBlock(pos, 3)    
-}
-
-
+window.game = game;
