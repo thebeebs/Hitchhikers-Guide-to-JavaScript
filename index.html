@@ -10,9 +10,8 @@
       </fieldset>
       
 <h1>Gross Revenue 2015-2017</h1>
-<div id="container" style="width:100%; height 200px;"></div>
+<div id="container" style="position:absolute; margin-left:200px; width:300px; height 200px;"></div>
 
- 
  <voxel-world>     
      <!-- ko foreach : monthsData -->
      <voxel-graphpoint data-bind="attr: {'value' : sales}">
@@ -20,22 +19,21 @@
      <!-- /ko -->
  </voxel-world>
  
-<table>
+<table style="width:25%;">
     <thead><tr><td>Year</td><td>Month</td><td>Sales in MM</td></thead>
     <tbody data-bind="foreach: monthsData"><tr>
         <td data-bind="text: year"></td>
         <td data-bind="text: month"></td>
         <td data-bind="text: sales"></td>
     </tbody>
-</table>
-  
-   
+</table>   
     
     <script src="bower_components/jquery/dist/jquery.js"> </script>
     <script src="bower_components/knockout/dist/knockout.js"> </script>
     <script src="saleschart.js"> </script>
     <script src="builtgame.js"></script>
     <script src="voxel-world\voxel-world.js"></script>
+  <script src="ES6/7Async.js"></script>
   
   </body>
 </html>
