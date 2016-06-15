@@ -1,7 +1,7 @@
 "use strict"
 class salesChart extends HTMLElement{
     createdCallback(){
-        var shadow = this.createShadowRoot();
+         var shadow = this.createShadowRoot();
         shadow.innerHTML =  `
     <style>p {color: red;}</style>
     <p> My Sales data goes here</p>    

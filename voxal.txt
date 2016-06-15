@@ -1,0 +1,8 @@
+ <voxel-world>     
+     <!-- ko foreach : monthsData -->
+     <voxel-graphpoint data-bind="attr: {'value' : sales}">
+     </voxel-graphpoint>     
+     <!-- /ko -->
+ </voxel-world>
+
+<script src="voxel-world\voxel-world.js"></script>
