@@ -1,8 +1,8 @@
-/* Hello ASOS program */
+/* Hello Reasons program */
 
 #include<stdio.h>
 
 int main() {
-  printf("hello, ASOS!\n");
+  printf("Hello, Reasons!\n");
   return 0;
 }
